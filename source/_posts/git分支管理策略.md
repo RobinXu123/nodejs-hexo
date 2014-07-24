@@ -1,5 +1,6 @@
 title: Git分支管理策略
 date: 2014-07-23 11:12:58
+permalink: git-branching-model
 tags: 
 - 版本控制
 - git
@@ -152,3 +153,8 @@ git merge --no-ff fixbug-0.1
 git branch -d fixbug-0.1
 ```
 （完）
+
+> 附上些git流程图解
+
+![](gitflow.jpg)
+[Git-branching-model.pdf](Git-branching-model.pdf)

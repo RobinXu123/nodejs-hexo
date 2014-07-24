@@ -1,5 +1,6 @@
 title: Git远程操作详解
 date: 2014-07-23 21:18:50
+permalink: git-remote-operation
 tags:
 - 版本控制
 - git
