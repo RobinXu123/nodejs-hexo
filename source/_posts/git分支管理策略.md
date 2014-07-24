@@ -19,6 +19,8 @@ categories:
 
 ![](http://image.beekka.com/blog/201207/bg2012070501.png)
 
+<!-- more -->
+
 相比同类软件，Git有很多优点。其中很显著的一点，就是版本的分支（branch）和合并（merge）十分方便。有些传统的版本管理软件，分支操作实际上会生成一份现有代码的物理拷贝，而Git只生成一个指向当前版本（又称"快照"）的指针，因此非常快捷易用。
 
 但是，太方便了也会产生副作用。如果你不加注意，很可能会留下一个枝节蔓生、四处开放的版本库，到处都是分支，完全看不出主干发展的脉络。
@@ -156,5 +158,5 @@ git branch -d fixbug-0.1
 
 > 附上些git流程图解
 
-![](gitflow.jpg)
-[Git-branching-model.pdf](Git-branching-model.pdf)
+![](/files/git分支管理策略/gitflow.jpg)
+[Git-branching-model.pdf](/files/git分支管理策略/Git-branching-model.pdf)

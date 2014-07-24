@@ -1,6 +1,7 @@
 title: Git远程操作详解
 date: 2014-07-23 21:18:50
 permalink: git-remote-operation
+
 tags:
 - 版本控制
 - git
@@ -24,6 +25,8 @@ Git有很多优势，其中之一就是远程操作非常简便。本文详细�
 本文针对初级用户，从最简单的讲起，但是需要读者对Git的基本用法有所了解。同时，本文覆盖了上面5个命令的几乎所有的常用用法，所以对于熟练用户也有参考价值。
 
 ![git](http://image.beekka.com/blog/2014/bg2014061202.jpg)
+
+<!-- more -->
 
 ## 一、git clone
 
