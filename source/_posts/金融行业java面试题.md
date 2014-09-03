@@ -10,8 +10,6 @@ categories:
 
 # Real World Java Interview Questions: Financial Industry
 
-标签（空格分隔）： Work Interview Java
-
 ---
 > Industry : Finance / Banking
 > Position : Senior Java Developer
@@ -28,6 +26,9 @@ This was a telephone interview and the candidate was asked the following questio
 ### 6. Have you worked on any other Spring Modules other then Spring Core?
 ### 7. What are the features of Spring Framework?
 ### 8. What is AOP ?
+
+<!-- more -->
+
 ### 9. Have you used AOP in your current project?
 ### 10. What is the difference between Bean Factory and Application Context?
 ### 11. Can you explain Bean life cycle in Spring Bean Factory Container?
