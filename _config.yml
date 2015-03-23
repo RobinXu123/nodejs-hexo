@@ -104,7 +104,7 @@ stylus:
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type: github
+  type: git
   repo: git@github.com:RobinXu123/robinBlog.git
 
 sitemap:
