@@ -1,0 +1,595 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title>Swift 2.0 Sequence | 懒癌重度患者...</title>
+    <meta name="author" content="Robin.Xu">
+    
+    <meta name="description" content="学到老 活到老">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="Swift 2.0 Sequence"/>
+    <meta property="og:site_name" content="姑苏拾得"/>
+
+    
+    <meta property="og:image" content="undefined"/>
+    
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="姑苏拾得" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+    
+        <link rel="stylesheet" href="/css/lib/prettify-tomorrow-night-eighties.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="indigo">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">姑苏拾得</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            分类
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/about" >
+                            <i class="fa fa-user "></i>
+                            关于
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav indigo darken-1" id="main-menu">
+        
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4 no-padding">
+                    <img class="avatar-image circle responsive-img" src="http://tp2.sinaimg.cn/2132668501/180/39997465185/1" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper no-padding">
+                    <div class="valign">
+                        <p class="name">Robin Xu</p>
+                        <p class="desc">iOS/Java/愤青/技术宅</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    首页
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    归档
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    分类
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/about" >
+                    <i class="fa fa-user "></i>
+                    关于
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav indigo darken-1" id="category-menu">
+        <!--<li class="">
+            <h5 class="black-text">分类目录</h5>
+        </li>-->
+
+    
+
+            
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/工作/">
+                    工作 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/日志/">
+                    日志 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/开发者手册/">
+                    开发者手册 <span class="right">5 篇</span></a>
+                </a>
+            </li>
+
+        
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+    <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper indigo">
+        <span class="breadcrumb">当前位置（目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/开发者手册/">开发者手册</a>
+
+
+        
+
+        
+    </div>
+</nav>
+
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>Swift 2.0 Sequence</h1>
+    
+
+
+            </div>
+            <time class="pink-link-context" datetime="2016-02-24T13:46:26.000Z"><a href="/2016/02/24/Swift 2.0 Sequence/">2016-02-24</a></time>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/Swift/" class="chip pink lighten-1">Swift</a>
+        
+            <a href="/tags/iOS/" class="chip pink lighten-1">iOS</a>
+        
+    </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    
+</div>
+
+
+            <div class="entry pink-link-context">
+                <p>什么是SequenceType? 我们直接看一下其定义：</p>
+<pre><code><span class="comment">/// A type that can be iterated with a `for`...`in` loop.</span>
+<span class="comment">///</span>
+<span class="comment">/// `SequenceType` makes no requirement on conforming types regarding</span>
+<span class="comment">/// whether they will be destructively "consumed" by iteration.  To</span>
+<span class="comment">/// ensure non-destructive iteration, constrain your *sequence* to</span>
+<span class="comment">/// `CollectionType`.</span>
+<span class="comment">///</span>
+<span class="comment">/// As a consequence, it is not possible to run multiple `for` loops</span>
+<span class="comment">/// on a sequence to "resume" iteration:</span>
+<span class="comment">///</span>
+<span class="comment">///   for element in sequence {</span>
+<span class="comment">///     if ... some condition { break }</span>
+<span class="comment">///   }</span>
+<span class="comment">///</span>
+<span class="comment">///   for element in sequence {</span>
+<span class="comment">///     // Not guaranteed to continue from the next element.</span>
+<span class="comment">///   }</span>
+<span class="comment">///</span>
+<span class="comment">/// `SequenceType` makes no requirement about the behavior in that</span>
+<span class="comment">/// case.  It is not correct to assume that a sequence will either be</span>
+<span class="comment">/// "consumable" and will resume iteration, or that a sequence is a</span>
+<span class="comment">/// collection and will restart iteration from the first element.</span>
+<span class="comment">/// A conforming sequence that is not a collection is allowed to</span>
+<span class="comment">/// produce an arbitrary sequence of elements from the second generator.</span>
+<span class="keyword">public</span> protocol SequenceType {
+    <span class="comment">/// A type that provides the *sequence*'s iteration interface and</span>
+    <span class="comment">/// encapsulates its iteration state.</span>
+    typealias <span class="string">Generator :</span> GeneratorType
+    <span class="comment">/// A type that represents a subsequence of some of the elements.</span>
+    typealias SubSequence
+    <span class="comment">/// Return a *generator* over the elements of this *sequence*.</span>
+    <span class="comment">///</span>
+    <span class="comment">/// - Complexity: O(1).</span>
+    <span class="annotation">@warn</span>_unused_result
+    <span class="keyword">public</span> func generate() -&gt; Self.Generator
+    <span class="comment">/// Return a value less than or equal to the number of elements in</span>
+    <span class="comment">/// `self`, **nondestructively**.</span>
+    <span class="comment">///</span>
+    <span class="comment">/// - Complexity: O(N).</span>
+    <span class="annotation">@warn</span>_unused_result
+    <span class="keyword">public</span> func underestimateCount() -&gt; Int
+    <span class="comment">/// Return an `Array` containing the results of mapping `transform`</span>
+    <span class="comment">/// over `self`.</span>
+    <span class="comment">///</span>
+    <span class="comment">/// - Complexity: O(N).</span>
+    <span class="annotation">@warn</span>_unused_result
+    <span class="annotation">@rethrows</span> <span class="keyword">public</span> func map&lt;T&gt;(<span class="annotation">@noescape</span> <span class="string">transform:</span> (Self.Generator.Element) <span class="keyword">throws</span> -&gt; T) rethrows -&gt; [T]
+    <span class="comment">/// Return an `Array` containing the elements of `self`,</span>
+    <span class="comment">/// in order, that satisfy the predicate `includeElement`.</span>
+    <span class="annotation">@warn</span>_unused_result
+    <span class="annotation">@rethrows</span> <span class="keyword">public</span> func filter(<span class="annotation">@noescape</span> <span class="string">includeElement:</span> (Self.Generator.Element) <span class="keyword">throws</span> -&gt; Bool) rethrows -&gt; [Self.Generator.Element]
+    <span class="comment">/// Call `body` on each element in `self` in the same order as a</span>
+    <span class="comment">/// *for-in loop.*</span>
+    <span class="comment">///</span>
+    <span class="comment">///     sequence.forEach {</span>
+    <span class="comment">///       // body code</span>
+    <span class="comment">///     }</span>
+    <span class="comment">///</span>
+    <span class="comment">/// is similar to:</span>
+    <span class="comment">///</span>
+    <span class="comment">///     for element in sequence {</span>
+    <span class="comment">///       // body code</span>
+    <span class="comment">///     }</span>
+    <span class="comment">///</span>
+    <span class="comment">/// - Note: You cannot use the `break` or `continue` statement to exit the</span>
+    <span class="comment">///   current call of the `body` closure or skip subsequent calls.</span>
+    <span class="comment">/// - Note: Using the `return` statement in the `body` closure will only</span>
+    <span class="comment">///   exit from the current call to `body`, not any outer scope, and won't</span>
+    <span class="comment">///   skip subsequent calls.</span>
+    <span class="comment">///</span>
+    <span class="comment">/// - Complexity: O(`self.count`)</span>
+    <span class="annotation">@rethrows</span> <span class="keyword">public</span> func forEach(<span class="annotation">@noescape</span> <span class="string">body:</span> (Self.Generator.Element) <span class="keyword">throws</span> -&gt; ()) rethrows
+    <span class="comment">/// Returns a subsequence containing all but the first `n` elements.</span>
+    <span class="comment">///</span>
+    <span class="comment">/// - Requires: `n &gt;= 0`</span>
+    <span class="comment">/// - Complexity: O(`n`)</span>
+    <span class="annotation">@warn</span>_unused_result
+    <span class="keyword">public</span> func dropFirst(<span class="string">n:</span> Int) -&gt; Self.SubSequence
+    <span class="comment">/// Returns a subsequence containing all but the last `n` elements.</span>
+    <span class="comment">///</span>
+    <span class="comment">/// - Requires: `self` is a finite sequence.</span>
+    <span class="comment">/// - Requires: `n &gt;= 0`</span>
+    <span class="comment">/// - Complexity: O(`self.count`)</span>
+    <span class="annotation">@warn</span>_unused_result
+    <span class="keyword">public</span> func dropLast(<span class="string">n:</span> Int) -&gt; Self.SubSequence
+    <span class="comment">/// Returns a subsequence, up to `maxLength` in length, containing the</span>
+    <span class="comment">/// initial elements.</span>
+    <span class="comment">///</span>
+    <span class="comment">/// If `maxLength` exceeds `self.count`, the result contains all</span>
+    <span class="comment">/// the elements of `self`.</span>
+    <span class="comment">///</span>
+    <span class="comment">/// - Requires: `maxLength &gt;= 0`</span>
+    <span class="annotation">@warn</span>_unused_result
+    <span class="keyword">public</span> func prefix(<span class="string">maxLength:</span> Int) -&gt; Self.SubSequence
+    <span class="comment">/// Returns a slice, up to `maxLength` in length, containing the</span>
+    <span class="comment">/// final elements of `s`.</span>
+    <span class="comment">///</span>
+    <span class="comment">/// If `maxLength` exceeds `s.count`, the result contains all</span>
+    <span class="comment">/// the elements of `s`.</span>
+    <span class="comment">///</span>
+    <span class="comment">/// - Requires: `self` is a finite sequence.</span>
+    <span class="comment">/// - Requires: `maxLength &gt;= 0`</span>
+    <span class="annotation">@warn</span>_unused_result
+    <span class="keyword">public</span> func suffix(<span class="string">maxLength:</span> Int) -&gt; Self.SubSequence
+    <span class="comment">/// Returns the maximal `SubSequence`s of `self`, in order, that</span>
+    <span class="comment">/// don't contain elements satisfying the predicate `isSeparator`.</span>
+    <span class="comment">///</span>
+    <span class="comment">/// - Parameter maxSplit: The maximum number of `SubSequence`s to</span>
+    <span class="comment">///   return, minus 1.</span>
+    <span class="comment">///   If `maxSplit + 1` `SubSequence`s are returned, the last one is</span>
+    <span class="comment">///   a suffix of `self` containing the remaining elements.</span>
+    <span class="comment">///   The default value is `Int.max`.</span>
+    <span class="comment">///</span>
+    <span class="comment">/// - Parameter allowEmptySubsequences: If `true`, an empty `SubSequence`</span>
+    <span class="comment">///   is produced in the result for each pair of consecutive elements</span>
+    <span class="comment">///   satisfying `isSeparator`.</span>
+    <span class="comment">///   The default value is `false`.</span>
+    <span class="comment">///</span>
+    <span class="comment">/// - Requires: `maxSplit &gt;= 0`</span>
+    <span class="annotation">@warn</span>_unused_result
+    <span class="annotation">@rethrows</span> <span class="keyword">public</span> func split(<span class="string">maxSplit:</span> Int, <span class="string">allowEmptySlices:</span> Bool, <span class="annotation">@noescape</span> <span class="string">isSeparator:</span> (Self.Generator.Element) <span class="keyword">throws</span> -&gt; Bool) rethrows -&gt; [Self.SubSequence]
+}
+</code></pre><p>字面意思就是使类型序列化，简单的说就是为了泛型结构能够使用for…in这种方便的循环取值操作。 在Swift的类型定义中，我们可以看到String、Array等这些些基本的类型都实现了SequenceType协议。  为了便于理解，我们还是来看一个实例就知道了。</p>
+<pre><code><span class="class"><span class="keyword">struct</span> <span class="title">Stack</span>&lt;<span class="title">T</span>&gt; </span>{
+    <span class="keyword">var</span> items = [<span class="type">T</span>]()
+    <span class="keyword">var</span> <span class="built_in">count</span>:<span class="type">Int</span> {
+        <span class="keyword">return</span> items.<span class="built_in">count</span>
+    }
+
+    <span class="keyword">mutating</span> <span class="func"><span class="keyword">func</span> <span class="title">push</span><span class="params">(item: T)</span> </span>{
+        items.append(item)
+    }
+
+    <span class="keyword">mutating</span> <span class="func"><span class="keyword">func</span> <span class="title">pop</span><span class="params">()</span> -&gt; <span class="title">T</span> </span>{
+        <span class="keyword">return</span> items.last!
+    }
+
+    <span class="keyword">subscript</span>(index: <span class="type">Int</span>) -&gt; <span class="type">T</span> {
+        <span class="keyword">get</span> {
+            precondition(index &lt; items.<span class="built_in">count</span>, <span class="string">"Index越界"</span>)
+            <span class="keyword">return</span> items[index]
+        }
+        <span class="keyword">set</span> {
+            precondition(index &lt; items.<span class="built_in">count</span>, <span class="string">"Index越界"</span>)
+            items[index] = newValue
+        }
+    }
+}
+
+<span class="keyword">var</span> stackOfStrings = <span class="type">Stack</span>&lt;<span class="type">String</span>&gt;()
+<span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">1</span>...<span class="number">5</span> {
+    stackOfStrings.push(<span class="string">"stackTestValue_<span class="subst">\(i)</span>"</span>)
+}
+<span class="keyword">for</span> item <span class="keyword">in</span> stackOfStrings {
+    <span class="built_in">print</span>(item)
+}
+</code></pre><blockquote>
+<p>编译器抛出了错误： ‘Stack’ does not have a member named ‘Generator’</p>
+</blockquote>
+<p>这个错误就是写本文的目的，我们来添加上序列化代码：</p>
+<pre><code><span class="class"><span class="keyword">extension</span> <span class="title">Stack</span>: <span class="title">SequenceType</span> </span>{
+    <span class="func"><span class="keyword">func</span> <span class="title">generate</span><span class="params">()</span> -&gt; <span class="title">AnyGenerator</span><span class="generics">&lt;T&gt;</span> </span>{
+        <span class="keyword">var</span> index = <span class="number">0</span>
+        <span class="keyword">return</span> anyGenerator {
+            <span class="keyword">if</span> index &lt; <span class="keyword">self</span>.items.<span class="built_in">count</span> {
+                <span class="keyword">return</span> <span class="keyword">self</span>.items[index++]
+            } <span class="keyword">else</span> {
+                <span class="keyword">return</span> <span class="built_in">nil</span>
+            }
+        }
+    }
+}
+</code></pre>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+    <section id="comment">
+        <div class="card">
+            <div class="card-content">
+                <!-- Duoshuo Comment BEGIN -->
+                <div class="ds-thread" data-thread-key="2016/02/24/Swift 2.0 Sequence/" data-title="Swift 2.0 Sequence" data-url="http://robinxu.tk/2016/02/24/Swift 2.0 Sequence/"></div>
+
+                <script type="text/javascript">
+                    console.log(document.querySelector('.ds-thread'));
+                    var duoshuoQuery = {
+                        short_name: 'robinxu'
+                    };
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';
+                        ds.async = true;
+                        ds.src = (document.location.protocol == 'https:'
+                            ? 'https:'
+                            : 'http:') + '//static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                </script>
+                <!-- Duoshuo Comment END -->
+            </div>
+        </div>
+    </section>
+
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large pink">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect green" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse yellow darken-1"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+    </ul>
+  </div>
+
+    </main>
+    <footer class="page-footer indigo darken-1">
+    
+    <div class="container">
+        <div class="row">
+            
+            <div class="social-group col m3 s12">
+                <h5 class="white-text">社交</h5>
+                
+                    <a class="social-link" href="http://weibo.com/2132668501" target="_blank">
+                        <i class="fa fa-2x fa-weibo"></i>
+                    </a>
+                
+                    <a class="social-link" href="https://github.com/RobinXu123" target="_blank">
+                        <i class="fa fa-2x fa-github"></i>
+                    </a>
+                
+                    <a class="social-link" href="/atom.xml" target="_blank">
+                        <i class="fa fa-2x fa-rss"></i>
+                    </a>
+                
+            </div>
+            
+
+            
+            <div class="col m9 s12">
+                <h5 class="white-text">友情链接</h5>
+                
+                    <a class="social-link" href="https://onevcat.com/#blog" target="_blank">喵神博客</a>
+                
+                    <a class="social-link" href="http://swifter.tips/" target="_blank">Swift Tips</a>
+                
+                    <a class="social-link" href="http://www.ruanyifeng.com/" target="_blank">阮老师</a>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="footer-copyright pink-link-context">
+        <div class="container">
+            © 2016 robinxu.tk, All rights reserved.
+            <p class="right" style="margin-top: 0;">本博客由 <a href="https://hexo.io">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>
+        </div>
+    </div>
+</footer>
+
+
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前浏览器不支持博客完整功能。如果要获得最佳体验，请点击右上角···，复制链接，并在其它浏览器打开</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前浏览器不支持博客完整功能。如果要获得最佳体验，请点击右上角···，复制链接，并在其它浏览器打开</p>
+</div>
+
+
+<script src="/js/jquery-2.1.1.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+
+<script>
+(function($) {
+    $(document).ready(function() {
+        // 隐藏禁用javascript（针对微信内置浏览器）的提示
+        $('.noscript').hide();
+
+        // 图片缩放效果
+        var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+        // 给图片加上点击放大效果（materialbox插件）
+        $imgs.addClass('materialboxed')
+            .each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+        // 首页幻灯片
+        $('.slider').slider({
+            indicators: true,
+            full_width: true,
+            interval: 8000
+        });
+
+        $(".button-collapse").sideNav();
+        $(".category-menu").sideNav();
+
+        // 针对gallery post
+        $('.carousel').carousel({
+            full_width: true
+        });
+        $('.carousel-control.prev').click(function() {
+            $('.carousel').carousel('prev');
+        });
+        $('.carousel-control.next').click(function() {
+            $('.carousel').carousel('next');
+        });
+
+        // 文章目录
+        $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+        // 修正文章目录的left-border颜色
+        var color = $('.table-of-contents-text').css('color');
+        $('.table-of-contents-link').css('border-left-color', color);
+
+        // 针对移动端做的优化：FAB按钮点击一下收回
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            $('.fixed-action-btn').addClass('click-to-toggle');
+        }
+        // 回到顶部
+        $('.btn-return-top').click(function() {
+            $('body, html').animate({
+                scrollTop: 0
+            }, 500);
+        });
+
+        // 重置读书页面的Tab标签页的颜色
+        $('li.tab a').hover(function() {
+            $(this).toggleClass('text-lighten-4');
+        });
+        $('.indicator').addClass('pink lighten-2');
+
+        
+        // 添加new标签
+        $('.menu-reading,.menu-about').append('<span class="new badge pink"></span>');
+        
+    });
+})(jQuery);
+</script>
+
+
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+</body>
+</html>

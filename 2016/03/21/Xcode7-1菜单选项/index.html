@@ -1,0 +1,587 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title>Xcode7.1菜单选项 | 懒癌重度患者...</title>
+    <meta name="author" content="Robin.Xu">
+    
+    <meta name="description" content="学到老 活到老">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="Xcode7.1菜单选项"/>
+    <meta property="og:site_name" content="姑苏拾得"/>
+
+    
+    <meta property="og:image" content="undefined"/>
+    
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="姑苏拾得" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+    
+        <link rel="stylesheet" href="/css/lib/prettify-tomorrow-night-eighties.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="indigo">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">姑苏拾得</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            分类
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/about" >
+                            <i class="fa fa-user "></i>
+                            关于
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav indigo darken-1" id="main-menu">
+        
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4 no-padding">
+                    <img class="avatar-image circle responsive-img" src="http://tp2.sinaimg.cn/2132668501/180/39997465185/1" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper no-padding">
+                    <div class="valign">
+                        <p class="name">Robin Xu</p>
+                        <p class="desc">iOS/Java/愤青/技术宅</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    首页
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    归档
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    分类
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/about" >
+                    <i class="fa fa-user "></i>
+                    关于
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav indigo darken-1" id="category-menu">
+        <!--<li class="">
+            <h5 class="black-text">分类目录</h5>
+        </li>-->
+
+    
+
+            
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/工作/">
+                    工作 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/日志/">
+                    日志 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/开发者手册/">
+                    开发者手册 <span class="right">5 篇</span></a>
+                </a>
+            </li>
+
+        
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+    <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper indigo">
+        <span class="breadcrumb">当前位置（目录）</span>
+        
+            
+
+        
+
+        
+    </div>
+</nav>
+
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>Xcode7.1菜单选项</h1>
+    
+
+
+            </div>
+            <time class="pink-link-context" datetime="2016-03-21T08:30:49.000Z"><a href="/2016/03/21/Xcode7-1菜单选项/">2016-03-21</a></time>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/Xcode/" class="chip pink lighten-1">Xcode</a>
+        
+            <a href="/tags/iOS/" class="chip pink lighten-1">iOS</a>
+        
+    </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    
+</div>
+
+
+            <div class="entry pink-link-context">
+                <p>下面划了删除线的选项是太基础的选项可以忽略，<code>加粗的选项是需要注意的</code>。</p>
+<table>
+<thead>
+<tr>
+<th>File:</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New : 可以新建tap,窗口，新文件，playground，workspace，target等等。 <br><br> Add Files to XX: 为这个项目中引入文件 <br><br> <del>Open ：打开文件</del> <br><br> Open Recent  ：打开最近的打开的项目或者工作组 <br><br> Open Quickly  ：通过搜索文件名快速打开一个文件 <br><br> Close ：这几个选项的都是关闭操作。 <br><br> <del>Save ：保存</del> <br><br> <del>Duplicate：复制</del> <br><br> <strong>Revert  to Saved：将此文件的修改直接回退到上次保存时</strong> <br><br> Unlock ：要对第三方库或系统文件进行修改时解锁 <br><br> <del>Show in Finder ：在Finder 中展示</del> <br><br> Open with External Editor  ：使用外部编辑器打开 <br><br> Save As Workspace： 另存为工作组 <br><br> Page Setup ：页面设置，为打印而生 <br><br> Print… ：用打印机打印当前文件</td>
+<td><img src="/images/Xcode7.1 菜单选项/1.png" alt="File"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Edit:</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Undo: 撤销 <br><br> Redo ：反撤销 <br><br> <del>Cut ：剪切</del> <br><br> <del>Copy ：拷贝</del> <br><br> <del>Paste ：粘贴</del> <br><br> Special Paste ：特殊粘贴 ?? <br><br> Paste and Preserve formatter ：粘贴并匹配样式 <br><br> <del>Duplicate :复制</del> <br><br> <del>Delete :删除</del> <br><br> <del>Select All :全选</del> <br><br> Filter : 筛选，可以选择在导航栏中筛选和在库中筛选 <br><br> Sort：排序 (还不知道怎么用) <br><br> Format ：格式 <br><br> Font ：可以打开字体和颜色的设置框，可以copy样式。 <br><br> Text ：可以设置编码的页面左右对齐，<strong>显示顶部标尺</strong>。 <br><br> Spelling and Grammar ：拼写提示和语法提示。 <br><br> Substitutions：会出来个仪表盘，提供微操。 <br><br> <strong>Transformations ：可以将英文转成全大写，全小写，首字母大写。</strong> <br><br> Speech ：开始说话结束说话。 <br><br> Refactor: 重构 <br><br> Rename 重命名 <br><br> Extract 提取 <br><br> Create Superclass  创建超类 <br><br> Move Up 上移 <br><br> Move Down 下移 <br><br> Convert：转换成ARC,swift等 <br><br> Encapsulate 封装 <br><br> Start Dictation: 开始听写 <br><br> <strong>Emoji &amp; symbols：emoji表情和特殊符号</strong></td>
+<td><img src="/images/Xcode7.1 菜单选项/2.png" alt="Edit"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>View:</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard Editor ：标准模块 <br><br> Assistant Editor ：助理模块 <br><br> Version Editor： 版本模块 <br><br> Navigators：里面包含了xcode左边8个导航模块的切换。 <br><br> Debug Area：中下部的调试框和打印输出框。 <br><br> Untilities: xcode右边的上面两个选项和下面的四个选项。 <br><br> Show File Inspector：显示文件检查 <br><br> Show Quick Help Inspector：显示快速帮助 <br><br> File Template Library  文件模板库 <br><br> Code Snippet Library  代码片段库 <br><br> Object Library  对象库 <br><br> Media Library  媒体库 <br><br> Hide Utilities  隐藏实体工具 <br><br> <strong>Hide Toolbar  隐藏工具栏（XCode顶部）</strong> <br><br> <strong>Hide Tab Bar  隐藏标签栏（用了cmd+T出来的tab切换）</strong> <br><br> <del>Enter Full Screen：全屏</del></td>
+<td><img src="/images/Xcode7.1 菜单选项/3.png" alt="View"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Find:</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Find in Workspace… 在工作组中查找 <br><br> Find and Replace in Workspace… 在工作组中查找和替换 <br><br> … <br><br> 上面4个是在哪地方查找或替换，中间4个是在你几个选中的文件或组中查找， <br><br> 再下面4个是查找或替换，然后是替换。 <br><br> <strong>Find Call Hierarchy：查找到调用层级。</strong> <br><br> Hide Find Bar：隐藏查找栏 <br><br> Use Selection for Find ：使用选择的地方去查找 <br><br> Use Selection for Replace：使用选择的地方去替换</td>
+<td><img src="/images/Xcode7.1 菜单选项/4.png" alt="Find"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Navigate:</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Reveal in Project Navigator ：在项目导航中揭示出此文件</strong> <br><br> Reveal in Symbol Navigator  ：在符号导航中揭示出某方法 <br><br> Open in Assistant Editor：用分屏助理打开 <br><br> <strong>Open in ..   你想怎么打开</strong> <br><br> Move Focus To Next Area  将焦点移动到下一个区域 <br><br> Move Focus To Editor   将焦点移动到编辑器 <br><br> Go Forward  前进，相当于两个手指左划右划 <br><br> Go back  后退 <br><br> Jump to Selection 跳转到选择 <br><br> Jump to Definition 跳转到定义 <br><br> Jump to OriginalSource 跳到源文件 <br><br> Jump to Next Issue  跳转到下一个问题 <br><br> Jump to Previous Issue  跳转到上一个问题 <br><br> Jump to Next Counterpart  ：?? <br><br> Jump to Previous Counterpart : ?? <br><br> Jump to Line in xxx.m ：跳到这个文件的第几行。 <br><br> Jump to Next Placeholder ：?? <br><br> Jump to Previous Placeholder：??</td>
+<td><img src="/images/Xcode7.1 菜单选项/5.png" alt="Navigate"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Editor:(选中文件状态下):</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show Completions : 显示自动补全 <br><br> Edit All in Scope: 在当前文件全文修改选中的一个变量或单词 <br><br> <strong>Fix All in Scope: 在当前文件自动处理他能解决的error，相当于点<img src="/images/Xcode7.1 菜单选项/6.png" alt="error"></strong> <br><br> <strong>Show issue: 展示错误和隐藏错误，相当于点左边的按钮<img src="/images/Xcode7.1 菜单选项/7.png" alt="error"></strong> <br><br> Issues: 可以控制展示全部错误警告，还是仅仅展示警告。 <br><br> Structure: 构造 <br><br> Balance Delimiter：直接选中光标所在的整个大括号 <br><br> <strong>Re-Indent : 将格式缩进整理一下</strong> <br><br> 这里还有四个，分别是往前或往后移一个tab，往上往下移一行 <br><br> Code Folding: 提供各种折叠和取消折叠 <br><br> <strong>Focus Follow Selection：高亮聚焦你光标所在的模块</strong> <br><br> Syntax Coloring: 设置各个语法的高亮配色 <br><br> <strong>Show Invisibles: 显示所有隐藏的东西，比如空格。</strong> <br><br> Show Blame for Line: 显示选中的行的修改者和log。 <br><br> Show Code Coverage: 展示代码的覆盖范围</td>
+<td><img src="/images/Xcode7.1 菜单选项/8.png" alt="Editor:(选中文件状态下)"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Editor:(选中xib状态下):</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Canvas 画布 <br><br> <strong>Show Selection Highlights: 显示选中控件的高亮</strong> <br><br> Show Resize Knobs：显示约束旁边的小方块 <br><br> Show Constraints ：显示约束 <br><br> <strong>Show Involved Views For Selected Constraints：显示约束涉及到的视图</strong> <br><br> <strong>Show Layout Rectangles  布局矩形</strong> <br><br> Size Class: 屏幕布局相关，相当于点xib下面的按钮 <br><br> Show Bounds Rectangles  显示边界矩形 <br><br> Hide Document Outline：隐藏或显示左边的层级图 <br><br> Reveal in Document Outline：在左边的层级图中揭示出来 <br><br> Align  对准 <br><br> <del>Align Left Edges  左边缘对齐</del> <br><br> <del>Align Right Edges  右边缘对齐</del> <br><br> <del>Align Top Edges  顶部边缘对齐</del> <br><br> <del>Align Bottom Edges  底部边缘对齐</del> <br><br> <del>Align Horizontal Centers  横向中心对齐</del> <br><br> <del>Align Vertical Centers  竖向中心对齐</del> <br><br> Align Baselines  基线对齐 <br><br> Align Horizontal Center In Container   对齐容器中的水平中心 <br><br> Align Vertical Center In Container   对齐容器中的垂直中心 <br><br> Arrange : 可以上移下移或移到背景等 <br><br> Embed ： 嵌入，可以嵌nav，tabbar，scrollView <br><br> Unembed   解除嵌入 <br><br> Size to Fit ：大小以适合 <br><br> <strong>Snap to Guides：让引导线具有吸附功能，让控件靠近就自动对齐</strong> <br><br> Guides：设置引导标尺线 <br><br> Add Horizontal Guide ： 添加横向标尺线 <br><br> Add Vertical Guide ： 添加垂直标尺线 <br><br> Automatically Refresh Views：自动刷新视图 <br><br> Refresh All Views：刷新所有视图 <br><br> Debug Selected Views：调试选中的视图？ <br><br> Resolve Auto Layout issues：解决自动布局的问题，类似于点<img src="/images/Xcode7.1 菜单选项/9.png" alt="align"> <br><br> Refactor to Storyboard：把VC重构成SB？</td>
+<td><img src="/images/Xcode7.1 菜单选项/10.png" alt="Editor:(选中xib状态下)"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Product:</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><del>Run：运行</del> <br><br> Test：?? <br><br> Profile：打开instrument之类的 <br><br> <strong>Analyze：进行代码分析，可以检测一些不规范的OC语法</strong> <br><br> Archive：归档 <br><br> Build for：和上面的功能相似。 <br><br> Perform Action：?? <br><br> <del>Build：编译</del> <br><br> <del>Clean：清一下之前编译的缓存</del> <br><br> <del>Stop：停止</del></td>
+<td><img src="/images/Xcode7.1 菜单选项/11.png" alt="Product"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Debug:</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pause : 暂停 会 切换成继续 <br><br> <strong>Continue to Current Line：走到你光标选中的这行</strong> <br><br> Step Over ： 跨越 <br><br> Step Into ：步入 <br><br> Step Out ：走出 <br><br> Step Over Instruction： 跨过指示 <br><br> Step Over Thread ：单步执行在线程 <br><br> Step Into Instruction ：步入指示 <br><br> Step Into Thread ：单步执行线程 <br><br> Capture GPU Frame: 捕获GPU位置 <br><br> Simulate Location: 模拟模拟器的位置 <br><br> Simulate Background Fetch: 让模拟器去后台 <br><br> iCloud: 苹果云相关 <br><br> View Debugging: 关于视图的调试 <br><br> Take Screenshot of Active Device：截图 <br><br> <strong>Capture View Hierarchy: 用3D图 来捕获视图层次</strong> <br><br> <strong>Show View Frame: 在模拟器上显示各个控件的尺寸大小</strong> <br><br> Show Alignment Rectangles: 显示对齐矩形 <br><br> Show View Drawing: 显示查看绘图 <br><br> Show Responsive Scrolling Status: 显示响应滚动状态 <br><br> Deactivate Breakpoints  停用中断点。 <br><br> Breakpoints: 相当于左下角的加号，增加各种断点。 <br><br> Debug Workflow：可以显示内存和清除打印等操作。 <br><br> Always Show Disassembly: 这要是勾上就只显示堆栈信息不看代码 <br><br> Attach to Process by PID or Name: 设置权限id或name <br><br> Attach to Progress: 附加到进程 <br><br> Detach: 跳过所有的断点</td>
+<td><img src="/images/Xcode7.1 菜单选项/12.png" alt="Debug"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Source Control:</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第一行是分支管理，可以创建分支合并分支，配置分支的源等等。 <br><br> <strong>Create Working Copy：项目中如果有地方是引用的那就copy一下。</strong> <br><br> Checkout：可以选择切换分支。 <br><br> <del>Commit  ：提交</del> <br><br> <del>Push ： 上传代码</del> <br><br> <del>Pull ：拉代码</del> <br><br> Refresh Status：刷新状态 <br><br> <strong>Discard Changes ：放弃所有修改。</strong> <br><br> <strong>Add Selected Files : 将选中的这些问号文件add一下。</strong> <br><br> <strong>Discard Changes  in selected Files : 将选中的这些文件放弃修改。</strong> <br><br> Mark Selected  Files as Resolved: 相当于合并或rebase过程中的解决。 <br><br> History：可以看当前分支的log历史。</td>
+<td><img src="/images/Xcode7.1 菜单选项/13.png" alt="Source Control"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Window:</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Minimize: 最小化 <br><br> Zoom：相当于windows的“还原” <br><br> Show next tab: 如果你有两个tab的话这个就是切换tab <br><br> Show previous tab: 同上 <br><br> Documentation and API Reference：打开xcode文档 <br><br> welcome to xcode: 来到开始页面 <br><br> Device：硬件，能看到MAC ，模拟器和手机 <br><br> Organizer：打开可以看到Archives 和 Crashes <br><br> <strong>Project：查看最近项目，也可以在这里删除Derived Data</strong> <br><br> <strong>Bring all to Front：把所有xcode打开的都置顶。</strong></td>
+<td><img src="/images/Xcode7.1 菜单选项/14.png" alt="Window"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Help:</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Search : 在目录中搜索功能。 <br><br> Documentation and API Reference：打开xcode文档 <br><br> Xcode OverView：打开xcode综述 <br><br> Release Notes：打开xcode各版本更新迭代的log。 <br><br> What’s New in Xcode：有什么新特性 <br><br> Quick help for selected Item：快速帮助，相当于按着option点。 <br><br> <strong>Search Documentation for Selected  Text：详细帮助，直接在文档里找到这个。</strong></td>
+<td><img src="/images/Xcode7.1 菜单选项/15.png" alt="Help"></td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+    <section id="comment">
+        <div class="card">
+            <div class="card-content">
+                <!-- Duoshuo Comment BEGIN -->
+                <div class="ds-thread" data-thread-key="2016/03/21/Xcode7-1菜单选项/" data-title="Xcode7.1菜单选项" data-url="http://robinxu.tk/2016/03/21/Xcode7-1菜单选项/"></div>
+
+                <script type="text/javascript">
+                    console.log(document.querySelector('.ds-thread'));
+                    var duoshuoQuery = {
+                        short_name: 'robinxu'
+                    };
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';
+                        ds.async = true;
+                        ds.src = (document.location.protocol == 'https:'
+                            ? 'https:'
+                            : 'http:') + '//static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                </script>
+                <!-- Duoshuo Comment END -->
+            </div>
+        </div>
+    </section>
+
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large pink">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect green" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse yellow darken-1"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+    </ul>
+  </div>
+
+    </main>
+    <footer class="page-footer indigo darken-1">
+    
+    <div class="container">
+        <div class="row">
+            
+            <div class="social-group col m3 s12">
+                <h5 class="white-text">社交</h5>
+                
+                    <a class="social-link" href="http://weibo.com/2132668501" target="_blank">
+                        <i class="fa fa-2x fa-weibo"></i>
+                    </a>
+                
+                    <a class="social-link" href="https://github.com/RobinXu123" target="_blank">
+                        <i class="fa fa-2x fa-github"></i>
+                    </a>
+                
+                    <a class="social-link" href="/atom.xml" target="_blank">
+                        <i class="fa fa-2x fa-rss"></i>
+                    </a>
+                
+            </div>
+            
+
+            
+            <div class="col m9 s12">
+                <h5 class="white-text">友情链接</h5>
+                
+                    <a class="social-link" href="https://onevcat.com/#blog" target="_blank">喵神博客</a>
+                
+                    <a class="social-link" href="http://swifter.tips/" target="_blank">Swift Tips</a>
+                
+                    <a class="social-link" href="http://www.ruanyifeng.com/" target="_blank">阮老师</a>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="footer-copyright pink-link-context">
+        <div class="container">
+            © 2016 robinxu.tk, All rights reserved.
+            <p class="right" style="margin-top: 0;">本博客由 <a href="https://hexo.io">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>
+        </div>
+    </div>
+</footer>
+
+
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前浏览器不支持博客完整功能。如果要获得最佳体验，请点击右上角···，复制链接，并在其它浏览器打开</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前浏览器不支持博客完整功能。如果要获得最佳体验，请点击右上角···，复制链接，并在其它浏览器打开</p>
+</div>
+
+
+<script src="/js/jquery-2.1.1.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+
+<script>
+(function($) {
+    $(document).ready(function() {
+        // 隐藏禁用javascript（针对微信内置浏览器）的提示
+        $('.noscript').hide();
+
+        // 图片缩放效果
+        var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+        // 给图片加上点击放大效果（materialbox插件）
+        $imgs.addClass('materialboxed')
+            .each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+        // 首页幻灯片
+        $('.slider').slider({
+            indicators: true,
+            full_width: true,
+            interval: 8000
+        });
+
+        $(".button-collapse").sideNav();
+        $(".category-menu").sideNav();
+
+        // 针对gallery post
+        $('.carousel').carousel({
+            full_width: true
+        });
+        $('.carousel-control.prev').click(function() {
+            $('.carousel').carousel('prev');
+        });
+        $('.carousel-control.next').click(function() {
+            $('.carousel').carousel('next');
+        });
+
+        // 文章目录
+        $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+        // 修正文章目录的left-border颜色
+        var color = $('.table-of-contents-text').css('color');
+        $('.table-of-contents-link').css('border-left-color', color);
+
+        // 针对移动端做的优化：FAB按钮点击一下收回
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            $('.fixed-action-btn').addClass('click-to-toggle');
+        }
+        // 回到顶部
+        $('.btn-return-top').click(function() {
+            $('body, html').animate({
+                scrollTop: 0
+            }, 500);
+        });
+
+        // 重置读书页面的Tab标签页的颜色
+        $('li.tab a').hover(function() {
+            $(this).toggleClass('text-lighten-4');
+        });
+        $('.indicator').addClass('pink lighten-2');
+
+        
+        // 添加new标签
+        $('.menu-reading,.menu-about').append('<span class="new badge pink"></span>');
+        
+    });
+})(jQuery);
+</script>
+
+
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+</body>
+</html>
