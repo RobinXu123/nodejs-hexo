@@ -3,7 +3,6 @@ date: 2014-09-03 22:29:19
 permalink: iOS_1
 tags:
 - iOS
-- 入门教程
 categories:
 - 开发者手册
 
@@ -206,7 +205,7 @@ PHP程序员要注意，在这里不能用单引号，即使只有一个字符�
 
 #### 带多个参数
 对C Family程序员来说，这是最难接受的，最反人类的：
-	
+
 	- (void) setColorToRed: (float)red Green: (float)green Blue:(float)blue {...} //定义方法
 	[myObj setColorToRed: 1.0 Green: 0.8 Blue: 0.2]; //调用方法
 
@@ -246,7 +245,7 @@ Interface
     	id  memberVar2;
 	}
 
-	-(return_type) instance_method1; 
+	-(return_type) instance_method1;
 	-(return_type) instance_method2: (int) p1;
 	-(return_type) instance_method3: (int) p1 andPar: (int) p2;
 	@end
@@ -256,7 +255,7 @@ Implementation
 	@implementation MyClass {
 		int memberVar3;
 	}
- 
+
 	-(return_type) instance_method1 {
     	....
 	}
@@ -278,15 +277,15 @@ Implementation
 		protected int memberVar1;
 		protected pointer memberVar2;
 		private int memberVar3;
-		
+
 		public (return_type) instance_method1() {
 			....
 		}
-		
+
 		public (return_type) instance_method2(int p1) {
 			....
 		}
-		
+
 		public (return_type) instance_method3andPar(int p1, int p2) {
 			....
 		}
@@ -311,7 +310,7 @@ Implementation
 	@end
 
 	@implementation MyClass
- 
+
 	+(void) sayHello {
     	NSLog(@"Hello, World");
 	}
@@ -332,7 +331,7 @@ Implementation
 	@end
 
 	@implementation MyClass
- 
+
 	-(void) sayHello {
     	NSLog(@"Hello, World");
 	}
@@ -349,7 +348,7 @@ selector就是一个方法指针，类似PHP里的动态方法名：
 	<?php
 	class Hello {
 		public function sayHello() {}
-		
+
 		public function test() {
 			$fun_name = "sayHello";
 			$this->$fun_name();
@@ -365,10 +364,10 @@ selector就是一个方法指针，类似PHP里的动态方法名：
 		UIButton *button = (UIButton*)sender;
 		[button setSelected:YES];
 	}
-	
+
 	- (void)drawAnButton {
-		UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom]; 
-		btn.frame = _frame; 
+		UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+		btn.frame = _frame;
 		btn.tag = 1;
 		btn.backgroundColor = [UIColor clearColor];
 		[btn addTarget: self
@@ -381,17 +380,17 @@ selector就是一个方法指针，类似PHP里的动态方法名：
 
 	@implementation ETHotDealViewController
 	- (void)viewDidLoad {
-		
+
 		//获取数据源
 		HotDealDataSource *ds = [[HotDealDataSource alloc]init];
 		[ds reload];
 		_items = ds.items;
-		
+
 		[self performSelector: @selector(refreshTable)
 			  withObject: self
 			  afterDelay: 0.5];//延迟0.5秒调用refreshTable方法
 	}
-	
+
 	-(void)refreshTable
 	{
 		[self.tableView reloadData];
@@ -452,7 +451,7 @@ selector就是一个方法指针，类似PHP里的动态方法名：
 加了@optional关键字，一个类在implements这个协议时，便可以不实现print:方法。
 
 Java里没有类似的实现，除了Collection里会有一些方法带有optional的注释，但Collection是个特例。
-	
+
 #### 协议的实现
 一个类实现某些协议是写在Interface定义里面的。语法为：协议名用尖括号包裹，多个协议名用逗号隔开，协议写在父类的右边（如果没有父类就直接写在子类右边）。
 
@@ -478,7 +477,7 @@ Printable, Drawablw就是两个协议。
 	@interface NSObject (Json)
 		-(NSString)toJson;
 	@end
-	
+
 实现文件：NSObject+Json.m
 
 	@implementation NSObject (Json)
@@ -504,11 +503,11 @@ Printable, Drawablw就是两个协议。
 	@interface NSObject (Json)
 		-(NSString)toJson;
 	@end
-	
+
 	@interface NSObject (XML)
 		-(NSString)toXML;
 	@end
-	
+
 实现文件：NSObject+Json+XML.m
 
 	@implementation NSObject (Json)
@@ -516,7 +515,7 @@ Printable, Drawablw就是两个协议。
 			//...
 		}
 	@end
-	
+
 	@implementation NSObject (XML)
 		-(NSString)toXML {
 			//...
@@ -692,10 +691,10 @@ iOS App里的控件尺寸和字体大小都是指Point，Retina设备（iPhone 4
 
 ### SVN操作含有@符号的文件
 iOS应用中经常出现xxxx@2x.png这样的文件名,它们是给retina设备用的高分辨率大图，用svn命令行操作它们的时候会被@符号干扰,解决方案是在svn命令末尾加上一个@符号,如:
-	
+
 	svn del icon@2x.png@
 	svn info Default@2x.png@
- 
+
 如果一次移动了几十个png文件再svn commit的,可以用shell批处理:
 
 	svn status | awk '($1=="!"){print $2}' | grep -v @ | xargs svn del
@@ -704,7 +703,7 @@ iOS应用中经常出现xxxx@2x.png这样的文件名,它们是给retina设备�
 	for file in `svn status | awk '($1=="!"){print $2}' `; do svn del $file"@"; done     
 
 上面这个命令是将文件名包含@符号的,且已经不在硬盘上的文件从svn version controll中删掉
- 
+
 svn add同上, 如法炮制即可.
 
 ### Xcode中的代码结构与操作系统上的文件系统并不一致

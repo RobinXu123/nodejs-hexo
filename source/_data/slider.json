@@ -1,0 +1,19 @@
+[{
+    "image": "/images/1.jpg",
+    "align": "center",
+    "title": "人要有梦想，万一实现了呢！",
+    "subtitle": "I have a dream that one day it will be true.",
+	"link": "/"
+}, {
+    "image": "/images/2.jpg",
+    "align": "left",
+    "title": "给梦想一个实践的机会。",
+    "subtitle": "Just do it, don't let time waste.",
+	"link": null
+}, {
+    "image": "/images/3.jpg",
+    "align": "right",
+    "title": "多花时间看别人如何失败。",
+    "subtitle": "Failure is the mother of success.",
+	"link": null
+}]

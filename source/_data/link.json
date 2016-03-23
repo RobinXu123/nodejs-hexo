@@ -1,0 +1,12 @@
+{
+  "social": {
+    "weibo": "http://weibo.com/2132668501",
+    "github": "https://github.com/RobinXu123",
+    "rss": "/atom.xml"
+  },
+  "extern": {
+    "喵神博客": "https://onevcat.com/#blog",
+    "Swift Tips": "http://swifter.tips/",
+    "阮老师": "http://www.ruanyifeng.com/"
+  }
+}

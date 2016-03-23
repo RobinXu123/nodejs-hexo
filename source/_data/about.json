@@ -1,0 +1,19 @@
+{
+  "avatar": "http://tp2.sinaimg.cn/2132668501/180/39997465185/1",
+  "name": "Robin Xu",
+  "tag": "iOS/Java/愤青/技术宅",
+  "desc": "我视金钱如粪土，别人视我如粪坑。",
+  "skills": {
+    "Swift": 7,
+    "Objective-C": 6,
+    "Java": 5,
+    "Javascript": 5,
+    "NodeJS": 4
+  },
+  "projects": [
+
+  ],
+  "reward": [
+    
+  ]
+}

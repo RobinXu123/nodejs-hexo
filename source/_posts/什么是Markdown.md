@@ -1,6 +1,7 @@
 title: 什么是Markdown
 date: 2016-03-21 10:05:22
-tags: Markdown
+tags:
+- Markdown
 ---
 
 ## 什么是 Markdown

@@ -1,6 +1,6 @@
 title: 金融行业Java面试题
 date: 2014-08-08 12:16:42
-tags: 
+tags:
 - Work
 - Interview
 - Java
