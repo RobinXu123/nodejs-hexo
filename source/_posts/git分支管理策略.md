@@ -1,11 +1,11 @@
 title: Git分支管理策略
 date: 2014-07-23 11:12:58
 permalink: git-branching-model
-tags: 
+tags:
 - 版本控制
 - git
 categories:
-- 开发者手册
+- 编程
 ---
 > 转载自 [阮一峰老师的blog](http://www.ruanyifeng.com/blog/2012/07/git.html)
 
@@ -143,7 +143,7 @@ git checkout -b fixbug-0.1 master
 git checkout master
 git merge --no-ff fixbug-0.1
 git tag -a 0.1.1
-``` 
+```
 
 再合并到develop分支：
 ```[bash]

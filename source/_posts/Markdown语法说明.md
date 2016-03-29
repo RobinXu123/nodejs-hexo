@@ -2,6 +2,8 @@ title: "Markdown语法说明"
 date: 2016-03-23 09:39:23
 tags:
 - Markdown
+categories:
+- 编程
 ---
 
 {% blockquote %}

@@ -6,7 +6,7 @@ tags:
 - 版本控制
 - git
 categories:
-- 开发者手册
+- 编程
 ---
 > 转载自 [阮一峰老师的blog](http://www.ruanyifeng.com/blog/2014/06/git_remote.html)
 
@@ -54,7 +54,7 @@ git clone支持多种协议，除了HTTP(s)以外，还支持SSH、Git、本地�
 $ git clone http[s]://example.com/path/to/repo.git/
 $ git clone ssh://example.com/path/to/repo.git/
 $ git clone git://example.com/path/to/repo.git/
-$ git clone /opt/git/project.git 
+$ git clone /opt/git/project.git
 $ git clone file:///opt/git/project.git
 $ git clone ftp[s]://example.com/path/to/repo.git/
 $ git clone rsync://example.com/path/to/repo.git/
@@ -306,7 +306,7 @@ $ git push --all origin
 如果远程主机的版本比本地版本更新，推送时Git会报错，要求先在本地做git pull合并差异，然后再推送到远程主机。这时，如果你一定要推送，可以使用--force选项。
 
 ``` [bash]
-$ git push --force origin 
+$ git push --force origin
 ```
 
 上面命令使用--force选项，结果导致在远程主机产生一个"非直进式"的合并（non-fast-forward merge）。除非你很确定要这样做，否则应该尽量避免使用--force选项。

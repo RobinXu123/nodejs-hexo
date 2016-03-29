@@ -3,6 +3,8 @@ date: 2016-02-24 10:24:55
 tags:
 - Hexo
 - tool
+categories:
+- 编程
 ---
 title: 指令
 ---

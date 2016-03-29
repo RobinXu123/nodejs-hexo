@@ -6,7 +6,7 @@ tags:
 - 版本控制
 - git
 categories:
-- 开发者手册
+- 编程
 ---
 
 项目中正在使用Git做版本控制，虽说有Source Tree之类的GUI工具，
