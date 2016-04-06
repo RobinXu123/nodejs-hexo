@@ -2,7 +2,7 @@ title: "iOS Study"
 date: 2016-03-29 16:13:08
 tags:
 - iOS
-categories
+categories:
 - 编程
 ---
 

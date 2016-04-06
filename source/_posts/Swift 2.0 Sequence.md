@@ -1,5 +1,5 @@
 title: Swift 2.0 Sequence
-permalink: iOS_1
+date: 2016-02-26 10:24:55
 tags:
 - iOS
 - Swift
