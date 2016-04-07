@@ -50,6 +50,7 @@
                     <li>
                         <a class="menu-home " href="/" >
                             <i class="fa fa-home "></i>
+                            
                             首页
                         </a>
                     </li>
@@ -57,6 +58,7 @@
                     <li>
                         <a class="menu-archive " href="/archives" >
                             <i class="fa fa-archive "></i>
+                            
                             归档
                         </a>
                     </li>
@@ -64,6 +66,7 @@
                     <li>
                         <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
                             <i class="fa fa-bookmark "></i>
+                            
                             分类
                         </a>
                     </li>
@@ -71,6 +74,7 @@
                     <li>
                         <a class="menu-about " href="/about" >
                             <i class="fa fa-user "></i>
+                            
                             关于
                         </a>
                     </li>
@@ -98,6 +102,7 @@
             <li class="no-padding">
                 <a class="waves-effect menu-home " href="/" >
                     <i class="fa fa-home "></i>
+                    
                     首页
                 </a>
             </li>
@@ -105,6 +110,7 @@
             <li class="no-padding">
                 <a class="waves-effect menu-archive " href="/archives" >
                     <i class="fa fa-archive "></i>
+                    
                     归档
                 </a>
             </li>
@@ -112,6 +118,7 @@
             <li class="no-padding">
                 <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
                     <i class="fa fa-bookmark "></i>
+                    
                     分类
                 </a>
             </li>
@@ -119,6 +126,7 @@
             <li class="no-padding">
                 <a class="waves-effect menu-about " href="/about" >
                     <i class="fa fa-user "></i>
+                    
                     关于
                 </a>
             </li>
@@ -126,10 +134,6 @@
     </ul>
 
     <ul class="side-nav indigo darken-1" id="category-menu">
-        <!--<li class="">
-            <h5 class="black-text">分类目录</h5>
-        </li>-->
-
     
 
             
@@ -152,7 +156,7 @@
 
             <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/编程/">
-                    编程 <span class="right">11 篇</span></a>
+                    编程 <span class="right">12 篇</span></a>
                 </a>
             </li>
 
@@ -169,7 +173,7 @@
         <div class="container main-container">
     <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
-        <span class="breadcrumb">当前位置（目录）</span>
+        <span class="breadcrumb">当前位置（分类目录）</span>
         
             
     
@@ -264,7 +268,7 @@
     </a>
     <ul>
       <li><a class="btn-return-top btn-floating waves-effect green" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
-      <li><a class="btn-floating waves-effect button-collapse yellow darken-1"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse yellow darken-1"  data-activates="main-menu" title="menu"><i class="fa fa-navicon"></i></a></li>
     </ul>
   </div>
 
@@ -345,6 +349,9 @@
                 $(this).attr('data-caption', $(this).attr('alt') || ' ');
             }).materialbox();
 
+        // 优化表格的显示
+        $('table').addClass('responsive-table striped bordered');
+
         // 首页幻灯片
         $('.slider').slider({
             indicators: true,
@@ -416,8 +423,8 @@ MathJax.Hub.Config({
   tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 });
 </script>
-<script type="text/javascript"
-    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" async
+  src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
 

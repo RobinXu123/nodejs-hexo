@@ -50,6 +50,7 @@
                     <li>
                         <a class="menu-home " href="/" >
                             <i class="fa fa-home "></i>
+                            
                             首页
                         </a>
                     </li>
@@ -57,6 +58,7 @@
                     <li>
                         <a class="menu-archive " href="/archives" >
                             <i class="fa fa-archive "></i>
+                            
                             归档
                         </a>
                     </li>
@@ -64,6 +66,7 @@
                     <li>
                         <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
                             <i class="fa fa-bookmark "></i>
+                            
                             分类
                         </a>
                     </li>
@@ -71,6 +74,7 @@
                     <li>
                         <a class="menu-about " href="/about" >
                             <i class="fa fa-user "></i>
+                            
                             关于
                         </a>
                     </li>
@@ -98,6 +102,7 @@
             <li class="no-padding">
                 <a class="waves-effect menu-home " href="/" >
                     <i class="fa fa-home "></i>
+                    
                     首页
                 </a>
             </li>
@@ -105,6 +110,7 @@
             <li class="no-padding">
                 <a class="waves-effect menu-archive " href="/archives" >
                     <i class="fa fa-archive "></i>
+                    
                     归档
                 </a>
             </li>
@@ -112,6 +118,7 @@
             <li class="no-padding">
                 <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
                     <i class="fa fa-bookmark "></i>
+                    
                     分类
                 </a>
             </li>
@@ -119,6 +126,7 @@
             <li class="no-padding">
                 <a class="waves-effect menu-about " href="/about" >
                     <i class="fa fa-user "></i>
+                    
                     关于
                 </a>
             </li>
@@ -126,10 +134,6 @@
     </ul>
 
     <ul class="side-nav indigo darken-1" id="category-menu">
-        <!--<li class="">
-            <h5 class="black-text">分类目录</h5>
-        </li>-->
-
     
 
             
@@ -152,7 +156,7 @@
 
             <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/编程/">
-                    编程 <span class="right">11 篇</span></a>
+                    编程 <span class="right">12 篇</span></a>
                 </a>
             </li>
 
@@ -169,7 +173,7 @@
         <div class="container main-container">
     <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
-        <span class="breadcrumb">当前位置（目录）</span>
+        <span class="breadcrumb">当前位置（分类目录）</span>
         
             
     
@@ -215,7 +219,7 @@
 
             <div class="entry pink-link-context">
                 <p>项目开发中常用到的 目录结构：</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="dartdoc"><span class="markdown">/**</span><br><span class="line"> *  1. Home目录  ./</span><br><span class="line"> *  整个应用程序各文档所在的目录</span><br><span class="line"> */</span></span></span><br><span class="line">let homeDirectory: <span class="built_in">String</span> = NSHomeDirectory()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">"Home path: \(homeDirectory)"</span>)</span><br><span class="line"></span><br><span class="line"><span class="dartdoc"><span class="markdown">/**</span><br><span class="line"> *  2. Documnets目录  ./Documents</span><br><span class="line"> *  用户文档目录，苹果建议将程序中建立的或在程序中浏览到的文件数据保存在该目录下，iTunes备份和恢复的时候会包括此目录</span><br><span class="line"> */</span></span></span><br><span class="line"></span><br><span class="line">let documnetPath1: <span class="built_in">String</span>? = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, <span class="keyword">true</span>).first</span><br><span class="line"></span><br><span class="line">let documnetPath2: <span class="built_in">String</span> = NSHomeDirectory() + <span class="string">"/Documents"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">"Document path: \(documnetPath1)"</span>)</span><br><span class="line"><span class="built_in">print</span>(documnetPath2)</span><br><span class="line"></span><br><span class="line"><span class="dartdoc"><span class="markdown">/**</span><br><span class="line"> *  3. Library目录  ./Library</span><br><span class="line"> *  这个目录下有两个子目录：Caches 和 Preferences</span><br><span class="line"> *  Library/Preferences目录，包含应用程序的偏好设置文件。不应该直接创建偏好设置文件，而是应该使用NSUserDefaults类来取得和设置应用程序的偏好。</span><br><span class="line"> *  Library/Caches目录，主要存放缓存文件，iTunes不会备份此目录，此目录下文件不会再应用退出时删除</span><br><span class="line"> */</span></span></span><br><span class="line"> <span class="comment">//Library目录－方法1</span></span><br><span class="line">let libraryPath1: <span class="built_in">String</span>? = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.LibraryDirectory,</span><br><span class="line">    NSSearchPathDomainMask.UserDomainMask, <span class="keyword">true</span>).first</span><br><span class="line"></span><br><span class="line"><span class="comment">//Library目录－方法2</span></span><br><span class="line">let libraryPath2: <span class="built_in">String</span> = NSHomeDirectory() + <span class="string">"/Library"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">"Library path: \(libraryPath1)"</span>)</span><br><span class="line"><span class="built_in">print</span>(libraryPath2)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//Cache目录－方法1</span></span><br><span class="line">let cachePath1: <span class="built_in">String</span>? = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory,</span><br><span class="line">    NSSearchPathDomainMask.UserDomainMask, <span class="keyword">true</span>).first</span><br><span class="line"></span><br><span class="line"><span class="comment">//Cache目录－方法2</span></span><br><span class="line">let cachePath2: <span class="built_in">String</span> = NSHomeDirectory() + <span class="string">"/Library/Caches"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">"Library/Caches path: \(cachePath1)"</span>)</span><br><span class="line"><span class="built_in">print</span>(cachePath2)</span><br><span class="line"></span><br><span class="line"><span class="dartdoc"><span class="markdown">/**</span><br><span class="line"><span class="bullet">*  </span>4. tmp目录  ./tmp</span><br><span class="line"><span class="bullet">*  </span>用于存放临时文件，保存应用程序再次启动过程中不需要的信息，重启后清空。</span><br><span class="line">*/</span></span></span><br><span class="line"> <span class="comment">//方法1</span></span><br><span class="line">let tmpDir: <span class="built_in">String</span> = NSTemporaryDirectory()</span><br><span class="line"></span><br><span class="line"><span class="comment">//方法2</span></span><br><span class="line">let tmpDir2: <span class="built_in">String</span> = NSHomeDirectory() + <span class="string">"/tmp"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">"tmp dir: \(tmpDir)"</span>)</span><br><span class="line"><span class="built_in">print</span>(tmpDir2)</span><br><span class="line"></span><br><span class="line"><span class="dartdoc"><span class="markdown">/**</span><br><span class="line"><span class="bullet">*  </span>5. 程序打包安装的目录 NSBundle.mainBundle()</span><br><span class="line"><span class="bullet">*  </span>工程打包安装后会在NSBundle.mainBundle()路径下，该路径是只读的，不允许修改。</span><br><span class="line"><span class="bullet">*  </span>所以当我们工程中有一个SQLite数据库要使用，在程序启动时，我们可以把该路径下的数据库拷贝一份到Documents路径下，以后整个工程都将操作Documents路径下的数据库。</span><br><span class="line">*/</span></span></span><br><span class="line"><span class="comment">//声明一个Documents下的路径</span></span><br><span class="line">let dbPath: <span class="built_in">String</span> = NSHomeDirectory() + <span class="string">"/Documents/DB.sqlite"</span></span><br><span class="line"><span class="comment">//判断数据库文件是否存在</span></span><br><span class="line"><span class="keyword">if</span> !NSFileManager.defaultManager().fileExistsAtPath(dbPath)&#123;</span><br><span class="line">    <span class="comment">//获取安装包内数据库路径</span></span><br><span class="line">    let bundleDBPath:<span class="built_in">String</span>? = NSBundle.mainBundle().pathForResource(<span class="string">"DB"</span>, ofType: <span class="string">"sqlite"</span>)</span><br><span class="line">    <span class="comment">//将安装包内数据库拷贝到Documents目录下</span></span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> NSFileManager.defaultManager().copyItemAtPath(bundleDBPath!, toPath: dbPath)</span><br><span class="line">    &#125; <span class="keyword">catch</span> _ &#123;</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"Couldn't copy!"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/**&#10; *  1. Home&#30446;&#24405;  ./&#10; *  &#25972;&#20010;&#24212;&#29992;&#31243;&#24207;&#21508;&#25991;&#26723;&#25152;&#22312;&#30340;&#30446;&#24405;&#10; */&#10;let homeDirectory: String = NSHomeDirectory()&#10;print(&#34;Home path: \(homeDirectory)&#34;)&#10;&#10;/**&#10; *  2. Documnets&#30446;&#24405;  ./Documents&#10; *  &#29992;&#25143;&#25991;&#26723;&#30446;&#24405;&#65292;&#33529;&#26524;&#24314;&#35758;&#23558;&#31243;&#24207;&#20013;&#24314;&#31435;&#30340;&#25110;&#22312;&#31243;&#24207;&#20013;&#27983;&#35272;&#21040;&#30340;&#25991;&#20214;&#25968;&#25454;&#20445;&#23384;&#22312;&#35813;&#30446;&#24405;&#19979;&#65292;iTunes&#22791;&#20221;&#21644;&#24674;&#22797;&#30340;&#26102;&#20505;&#20250;&#21253;&#25324;&#27492;&#30446;&#24405;&#10; */&#10;&#10;let documnetPath1: String? = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).first&#10;&#10;let documnetPath2: String = NSHomeDirectory() + &#34;/Documents&#34;&#10;&#10;print(&#34;Document path: \(documnetPath1)&#34;)&#10;print(documnetPath2)&#10;&#10;/**&#10; *  3. Library&#30446;&#24405;  ./Library&#10; *  &#36825;&#20010;&#30446;&#24405;&#19979;&#26377;&#20004;&#20010;&#23376;&#30446;&#24405;&#65306;Caches &#21644; Preferences&#10; *  Library/Preferences&#30446;&#24405;&#65292;&#21253;&#21547;&#24212;&#29992;&#31243;&#24207;&#30340;&#20559;&#22909;&#35774;&#32622;&#25991;&#20214;&#12290;&#19981;&#24212;&#35813;&#30452;&#25509;&#21019;&#24314;&#20559;&#22909;&#35774;&#32622;&#25991;&#20214;&#65292;&#32780;&#26159;&#24212;&#35813;&#20351;&#29992;NSUserDefaults&#31867;&#26469;&#21462;&#24471;&#21644;&#35774;&#32622;&#24212;&#29992;&#31243;&#24207;&#30340;&#20559;&#22909;&#12290;&#10; *  Library/Caches&#30446;&#24405;&#65292;&#20027;&#35201;&#23384;&#25918;&#32531;&#23384;&#25991;&#20214;&#65292;iTunes&#19981;&#20250;&#22791;&#20221;&#27492;&#30446;&#24405;&#65292;&#27492;&#30446;&#24405;&#19979;&#25991;&#20214;&#19981;&#20250;&#20877;&#24212;&#29992;&#36864;&#20986;&#26102;&#21024;&#38500;&#10; */&#10; //Library&#30446;&#24405;&#65293;&#26041;&#27861;1&#10;let libraryPath1: String? = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.LibraryDirectory,&#10;    NSSearchPathDomainMask.UserDomainMask, true).first&#10;&#10;//Library&#30446;&#24405;&#65293;&#26041;&#27861;2&#10;let libraryPath2: String = NSHomeDirectory() + &#34;/Library&#34;&#10;&#10;print(&#34;Library path: \(libraryPath1)&#34;)&#10;print(libraryPath2)&#10;&#10;&#10;//Cache&#30446;&#24405;&#65293;&#26041;&#27861;1&#10;let cachePath1: String? = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory,&#10;    NSSearchPathDomainMask.UserDomainMask, true).first&#10;&#10;//Cache&#30446;&#24405;&#65293;&#26041;&#27861;2&#10;let cachePath2: String = NSHomeDirectory() + &#34;/Library/Caches&#34;&#10;&#10;print(&#34;Library/Caches path: \(cachePath1)&#34;)&#10;print(cachePath2)&#10;&#10;/**&#10;*  4. tmp&#30446;&#24405;  ./tmp&#10;*  &#29992;&#20110;&#23384;&#25918;&#20020;&#26102;&#25991;&#20214;&#65292;&#20445;&#23384;&#24212;&#29992;&#31243;&#24207;&#20877;&#27425;&#21551;&#21160;&#36807;&#31243;&#20013;&#19981;&#38656;&#35201;&#30340;&#20449;&#24687;&#65292;&#37325;&#21551;&#21518;&#28165;&#31354;&#12290;&#10;*/&#10; //&#26041;&#27861;1&#10;let tmpDir: String = NSTemporaryDirectory()&#10;&#10;//&#26041;&#27861;2&#10;let tmpDir2: String = NSHomeDirectory() + &#34;/tmp&#34;&#10;&#10;print(&#34;tmp dir: \(tmpDir)&#34;)&#10;print(tmpDir2)&#10;&#10;/**&#10;*  5. &#31243;&#24207;&#25171;&#21253;&#23433;&#35013;&#30340;&#30446;&#24405; NSBundle.mainBundle()&#10;*  &#24037;&#31243;&#25171;&#21253;&#23433;&#35013;&#21518;&#20250;&#22312;NSBundle.mainBundle()&#36335;&#24452;&#19979;&#65292;&#35813;&#36335;&#24452;&#26159;&#21482;&#35835;&#30340;&#65292;&#19981;&#20801;&#35768;&#20462;&#25913;&#12290;&#10;*  &#25152;&#20197;&#24403;&#25105;&#20204;&#24037;&#31243;&#20013;&#26377;&#19968;&#20010;SQLite&#25968;&#25454;&#24211;&#35201;&#20351;&#29992;&#65292;&#22312;&#31243;&#24207;&#21551;&#21160;&#26102;&#65292;&#25105;&#20204;&#21487;&#20197;&#25226;&#35813;&#36335;&#24452;&#19979;&#30340;&#25968;&#25454;&#24211;&#25335;&#36125;&#19968;&#20221;&#21040;Documents&#36335;&#24452;&#19979;&#65292;&#20197;&#21518;&#25972;&#20010;&#24037;&#31243;&#37117;&#23558;&#25805;&#20316;Documents&#36335;&#24452;&#19979;&#30340;&#25968;&#25454;&#24211;&#12290;&#10;*/&#10;//&#22768;&#26126;&#19968;&#20010;Documents&#19979;&#30340;&#36335;&#24452;&#10;let dbPath: String = NSHomeDirectory() + &#34;/Documents/DB.sqlite&#34;&#10;//&#21028;&#26029;&#25968;&#25454;&#24211;&#25991;&#20214;&#26159;&#21542;&#23384;&#22312;&#10;if !NSFileManager.defaultManager().fileExistsAtPath(dbPath)&#123;&#10;    //&#33719;&#21462;&#23433;&#35013;&#21253;&#20869;&#25968;&#25454;&#24211;&#36335;&#24452;&#10;    let bundleDBPath:String? = NSBundle.mainBundle().pathForResource(&#34;DB&#34;, ofType: &#34;sqlite&#34;)&#10;    //&#23558;&#23433;&#35013;&#21253;&#20869;&#25968;&#25454;&#24211;&#25335;&#36125;&#21040;Documents&#30446;&#24405;&#19979;&#10;    do &#123;&#10;        try NSFileManager.defaultManager().copyItemAtPath(bundleDBPath!, toPath: dbPath)&#10;    &#125; catch _ &#123;&#10;        print(&#34;Couldn&#39;t copy!&#34;)&#10;    &#125;&#10;&#125;</span><br></pre></td></tr></table></figure>
 
             </div>
         </div>
@@ -262,7 +266,7 @@
     </a>
     <ul>
       <li><a class="btn-return-top btn-floating waves-effect green" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
-      <li><a class="btn-floating waves-effect button-collapse yellow darken-1"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse yellow darken-1"  data-activates="main-menu" title="menu"><i class="fa fa-navicon"></i></a></li>
     </ul>
   </div>
 
@@ -343,6 +347,9 @@
                 $(this).attr('data-caption', $(this).attr('alt') || ' ');
             }).materialbox();
 
+        // 优化表格的显示
+        $('table').addClass('responsive-table striped bordered');
+
         // 首页幻灯片
         $('.slider').slider({
             indicators: true,
@@ -414,8 +421,8 @@ MathJax.Hub.Config({
   tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 });
 </script>
-<script type="text/javascript"
-    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" async
+  src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
 

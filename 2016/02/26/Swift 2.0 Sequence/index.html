@@ -50,6 +50,7 @@
                     <li>
                         <a class="menu-home " href="/" >
                             <i class="fa fa-home "></i>
+                            
                             首页
                         </a>
                     </li>
@@ -57,6 +58,7 @@
                     <li>
                         <a class="menu-archive " href="/archives" >
                             <i class="fa fa-archive "></i>
+                            
                             归档
                         </a>
                     </li>
@@ -64,6 +66,7 @@
                     <li>
                         <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
                             <i class="fa fa-bookmark "></i>
+                            
                             分类
                         </a>
                     </li>
@@ -71,6 +74,7 @@
                     <li>
                         <a class="menu-about " href="/about" >
                             <i class="fa fa-user "></i>
+                            
                             关于
                         </a>
                     </li>
@@ -98,6 +102,7 @@
             <li class="no-padding">
                 <a class="waves-effect menu-home " href="/" >
                     <i class="fa fa-home "></i>
+                    
                     首页
                 </a>
             </li>
@@ -105,6 +110,7 @@
             <li class="no-padding">
                 <a class="waves-effect menu-archive " href="/archives" >
                     <i class="fa fa-archive "></i>
+                    
                     归档
                 </a>
             </li>
@@ -112,6 +118,7 @@
             <li class="no-padding">
                 <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
                     <i class="fa fa-bookmark "></i>
+                    
                     分类
                 </a>
             </li>
@@ -119,6 +126,7 @@
             <li class="no-padding">
                 <a class="waves-effect menu-about " href="/about" >
                     <i class="fa fa-user "></i>
+                    
                     关于
                 </a>
             </li>
@@ -126,10 +134,6 @@
     </ul>
 
     <ul class="side-nav indigo darken-1" id="category-menu">
-        <!--<li class="">
-            <h5 class="black-text">分类目录</h5>
-        </li>-->
-
     
 
             
@@ -152,7 +156,7 @@
 
             <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/编程/">
-                    编程 <span class="right">11 篇</span></a>
+                    编程 <span class="right">12 篇</span></a>
                 </a>
             </li>
 
@@ -169,7 +173,7 @@
         <div class="container main-container">
     <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
-        <span class="breadcrumb">当前位置（目录）</span>
+        <span class="breadcrumb">当前位置（分类目录）</span>
         
             
     
@@ -215,174 +219,174 @@
 
             <div class="entry pink-link-context">
                 <p>什么是SequenceType? 我们直接看一下其定义：</p>
-<pre><code><span class="comment">/// A type that can be iterated with a `for`...`in` loop.</span>
-<span class="comment">///</span>
-<span class="comment">/// `SequenceType` makes no requirement on conforming types regarding</span>
-<span class="comment">/// whether they will be destructively "consumed" by iteration.  To</span>
-<span class="comment">/// ensure non-destructive iteration, constrain your *sequence* to</span>
-<span class="comment">/// `CollectionType`.</span>
-<span class="comment">///</span>
-<span class="comment">/// As a consequence, it is not possible to run multiple `for` loops</span>
-<span class="comment">/// on a sequence to "resume" iteration:</span>
-<span class="comment">///</span>
-<span class="comment">///   for element in sequence {</span>
-<span class="comment">///     if ... some condition { break }</span>
-<span class="comment">///   }</span>
-<span class="comment">///</span>
-<span class="comment">///   for element in sequence {</span>
-<span class="comment">///     // Not guaranteed to continue from the next element.</span>
-<span class="comment">///   }</span>
-<span class="comment">///</span>
-<span class="comment">/// `SequenceType` makes no requirement about the behavior in that</span>
-<span class="comment">/// case.  It is not correct to assume that a sequence will either be</span>
-<span class="comment">/// "consumable" and will resume iteration, or that a sequence is a</span>
-<span class="comment">/// collection and will restart iteration from the first element.</span>
-<span class="comment">/// A conforming sequence that is not a collection is allowed to</span>
-<span class="comment">/// produce an arbitrary sequence of elements from the second generator.</span>
-<span class="keyword">public</span> protocol SequenceType {
-    <span class="comment">/// A type that provides the *sequence*'s iteration interface and</span>
-    <span class="comment">/// encapsulates its iteration state.</span>
-    typealias <span class="string">Generator :</span> GeneratorType
-    <span class="comment">/// A type that represents a subsequence of some of the elements.</span>
+<pre><code>/// A type that can be iterated with a `for`...`in` loop.
+///
+/// `SequenceType` makes no requirement on conforming types regarding
+/// whether they will be destructively &quot;consumed&quot; by iteration.  To
+/// ensure non-destructive iteration, constrain your *sequence* to
+/// `CollectionType`.
+///
+/// As a consequence, it is not possible to run multiple `for` loops
+/// on a sequence to &quot;resume&quot; iteration:
+///
+///   for element in sequence {
+///     if ... some condition { break }
+///   }
+///
+///   for element in sequence {
+///     // Not guaranteed to continue from the next element.
+///   }
+///
+/// `SequenceType` makes no requirement about the behavior in that
+/// case.  It is not correct to assume that a sequence will either be
+/// &quot;consumable&quot; and will resume iteration, or that a sequence is a
+/// collection and will restart iteration from the first element.
+/// A conforming sequence that is not a collection is allowed to
+/// produce an arbitrary sequence of elements from the second generator.
+public protocol SequenceType {
+    /// A type that provides the *sequence*&apos;s iteration interface and
+    /// encapsulates its iteration state.
+    typealias Generator : GeneratorType
+    /// A type that represents a subsequence of some of the elements.
     typealias SubSequence
-    <span class="comment">/// Return a *generator* over the elements of this *sequence*.</span>
-    <span class="comment">///</span>
-    <span class="comment">/// - Complexity: O(1).</span>
-    <span class="annotation">@warn</span>_unused_result
-    <span class="keyword">public</span> func generate() -&gt; Self.Generator
-    <span class="comment">/// Return a value less than or equal to the number of elements in</span>
-    <span class="comment">/// `self`, **nondestructively**.</span>
-    <span class="comment">///</span>
-    <span class="comment">/// - Complexity: O(N).</span>
-    <span class="annotation">@warn</span>_unused_result
-    <span class="keyword">public</span> func underestimateCount() -&gt; Int
-    <span class="comment">/// Return an `Array` containing the results of mapping `transform`</span>
-    <span class="comment">/// over `self`.</span>
-    <span class="comment">///</span>
-    <span class="comment">/// - Complexity: O(N).</span>
-    <span class="annotation">@warn</span>_unused_result
-    <span class="annotation">@rethrows</span> <span class="keyword">public</span> func map&lt;T&gt;(<span class="annotation">@noescape</span> <span class="string">transform:</span> (Self.Generator.Element) <span class="keyword">throws</span> -&gt; T) rethrows -&gt; [T]
-    <span class="comment">/// Return an `Array` containing the elements of `self`,</span>
-    <span class="comment">/// in order, that satisfy the predicate `includeElement`.</span>
-    <span class="annotation">@warn</span>_unused_result
-    <span class="annotation">@rethrows</span> <span class="keyword">public</span> func filter(<span class="annotation">@noescape</span> <span class="string">includeElement:</span> (Self.Generator.Element) <span class="keyword">throws</span> -&gt; Bool) rethrows -&gt; [Self.Generator.Element]
-    <span class="comment">/// Call `body` on each element in `self` in the same order as a</span>
-    <span class="comment">/// *for-in loop.*</span>
-    <span class="comment">///</span>
-    <span class="comment">///     sequence.forEach {</span>
-    <span class="comment">///       // body code</span>
-    <span class="comment">///     }</span>
-    <span class="comment">///</span>
-    <span class="comment">/// is similar to:</span>
-    <span class="comment">///</span>
-    <span class="comment">///     for element in sequence {</span>
-    <span class="comment">///       // body code</span>
-    <span class="comment">///     }</span>
-    <span class="comment">///</span>
-    <span class="comment">/// - Note: You cannot use the `break` or `continue` statement to exit the</span>
-    <span class="comment">///   current call of the `body` closure or skip subsequent calls.</span>
-    <span class="comment">/// - Note: Using the `return` statement in the `body` closure will only</span>
-    <span class="comment">///   exit from the current call to `body`, not any outer scope, and won't</span>
-    <span class="comment">///   skip subsequent calls.</span>
-    <span class="comment">///</span>
-    <span class="comment">/// - Complexity: O(`self.count`)</span>
-    <span class="annotation">@rethrows</span> <span class="keyword">public</span> func forEach(<span class="annotation">@noescape</span> <span class="string">body:</span> (Self.Generator.Element) <span class="keyword">throws</span> -&gt; ()) rethrows
-    <span class="comment">/// Returns a subsequence containing all but the first `n` elements.</span>
-    <span class="comment">///</span>
-    <span class="comment">/// - Requires: `n &gt;= 0`</span>
-    <span class="comment">/// - Complexity: O(`n`)</span>
-    <span class="annotation">@warn</span>_unused_result
-    <span class="keyword">public</span> func dropFirst(<span class="string">n:</span> Int) -&gt; Self.SubSequence
-    <span class="comment">/// Returns a subsequence containing all but the last `n` elements.</span>
-    <span class="comment">///</span>
-    <span class="comment">/// - Requires: `self` is a finite sequence.</span>
-    <span class="comment">/// - Requires: `n &gt;= 0`</span>
-    <span class="comment">/// - Complexity: O(`self.count`)</span>
-    <span class="annotation">@warn</span>_unused_result
-    <span class="keyword">public</span> func dropLast(<span class="string">n:</span> Int) -&gt; Self.SubSequence
-    <span class="comment">/// Returns a subsequence, up to `maxLength` in length, containing the</span>
-    <span class="comment">/// initial elements.</span>
-    <span class="comment">///</span>
-    <span class="comment">/// If `maxLength` exceeds `self.count`, the result contains all</span>
-    <span class="comment">/// the elements of `self`.</span>
-    <span class="comment">///</span>
-    <span class="comment">/// - Requires: `maxLength &gt;= 0`</span>
-    <span class="annotation">@warn</span>_unused_result
-    <span class="keyword">public</span> func prefix(<span class="string">maxLength:</span> Int) -&gt; Self.SubSequence
-    <span class="comment">/// Returns a slice, up to `maxLength` in length, containing the</span>
-    <span class="comment">/// final elements of `s`.</span>
-    <span class="comment">///</span>
-    <span class="comment">/// If `maxLength` exceeds `s.count`, the result contains all</span>
-    <span class="comment">/// the elements of `s`.</span>
-    <span class="comment">///</span>
-    <span class="comment">/// - Requires: `self` is a finite sequence.</span>
-    <span class="comment">/// - Requires: `maxLength &gt;= 0`</span>
-    <span class="annotation">@warn</span>_unused_result
-    <span class="keyword">public</span> func suffix(<span class="string">maxLength:</span> Int) -&gt; Self.SubSequence
-    <span class="comment">/// Returns the maximal `SubSequence`s of `self`, in order, that</span>
-    <span class="comment">/// don't contain elements satisfying the predicate `isSeparator`.</span>
-    <span class="comment">///</span>
-    <span class="comment">/// - Parameter maxSplit: The maximum number of `SubSequence`s to</span>
-    <span class="comment">///   return, minus 1.</span>
-    <span class="comment">///   If `maxSplit + 1` `SubSequence`s are returned, the last one is</span>
-    <span class="comment">///   a suffix of `self` containing the remaining elements.</span>
-    <span class="comment">///   The default value is `Int.max`.</span>
-    <span class="comment">///</span>
-    <span class="comment">/// - Parameter allowEmptySubsequences: If `true`, an empty `SubSequence`</span>
-    <span class="comment">///   is produced in the result for each pair of consecutive elements</span>
-    <span class="comment">///   satisfying `isSeparator`.</span>
-    <span class="comment">///   The default value is `false`.</span>
-    <span class="comment">///</span>
-    <span class="comment">/// - Requires: `maxSplit &gt;= 0`</span>
-    <span class="annotation">@warn</span>_unused_result
-    <span class="annotation">@rethrows</span> <span class="keyword">public</span> func split(<span class="string">maxSplit:</span> Int, <span class="string">allowEmptySlices:</span> Bool, <span class="annotation">@noescape</span> <span class="string">isSeparator:</span> (Self.Generator.Element) <span class="keyword">throws</span> -&gt; Bool) rethrows -&gt; [Self.SubSequence]
+    /// Return a *generator* over the elements of this *sequence*.
+    ///
+    /// - Complexity: O(1).
+    @warn_unused_result
+    public func generate() -&gt; Self.Generator
+    /// Return a value less than or equal to the number of elements in
+    /// `self`, **nondestructively**.
+    ///
+    /// - Complexity: O(N).
+    @warn_unused_result
+    public func underestimateCount() -&gt; Int
+    /// Return an `Array` containing the results of mapping `transform`
+    /// over `self`.
+    ///
+    /// - Complexity: O(N).
+    @warn_unused_result
+    @rethrows public func map&lt;T&gt;(@noescape transform: (Self.Generator.Element) throws -&gt; T) rethrows -&gt; [T]
+    /// Return an `Array` containing the elements of `self`,
+    /// in order, that satisfy the predicate `includeElement`.
+    @warn_unused_result
+    @rethrows public func filter(@noescape includeElement: (Self.Generator.Element) throws -&gt; Bool) rethrows -&gt; [Self.Generator.Element]
+    /// Call `body` on each element in `self` in the same order as a
+    /// *for-in loop.*
+    ///
+    ///     sequence.forEach {
+    ///       // body code
+    ///     }
+    ///
+    /// is similar to:
+    ///
+    ///     for element in sequence {
+    ///       // body code
+    ///     }
+    ///
+    /// - Note: You cannot use the `break` or `continue` statement to exit the
+    ///   current call of the `body` closure or skip subsequent calls.
+    /// - Note: Using the `return` statement in the `body` closure will only
+    ///   exit from the current call to `body`, not any outer scope, and won&apos;t
+    ///   skip subsequent calls.
+    ///
+    /// - Complexity: O(`self.count`)
+    @rethrows public func forEach(@noescape body: (Self.Generator.Element) throws -&gt; ()) rethrows
+    /// Returns a subsequence containing all but the first `n` elements.
+    ///
+    /// - Requires: `n &gt;= 0`
+    /// - Complexity: O(`n`)
+    @warn_unused_result
+    public func dropFirst(n: Int) -&gt; Self.SubSequence
+    /// Returns a subsequence containing all but the last `n` elements.
+    ///
+    /// - Requires: `self` is a finite sequence.
+    /// - Requires: `n &gt;= 0`
+    /// - Complexity: O(`self.count`)
+    @warn_unused_result
+    public func dropLast(n: Int) -&gt; Self.SubSequence
+    /// Returns a subsequence, up to `maxLength` in length, containing the
+    /// initial elements.
+    ///
+    /// If `maxLength` exceeds `self.count`, the result contains all
+    /// the elements of `self`.
+    ///
+    /// - Requires: `maxLength &gt;= 0`
+    @warn_unused_result
+    public func prefix(maxLength: Int) -&gt; Self.SubSequence
+    /// Returns a slice, up to `maxLength` in length, containing the
+    /// final elements of `s`.
+    ///
+    /// If `maxLength` exceeds `s.count`, the result contains all
+    /// the elements of `s`.
+    ///
+    /// - Requires: `self` is a finite sequence.
+    /// - Requires: `maxLength &gt;= 0`
+    @warn_unused_result
+    public func suffix(maxLength: Int) -&gt; Self.SubSequence
+    /// Returns the maximal `SubSequence`s of `self`, in order, that
+    /// don&apos;t contain elements satisfying the predicate `isSeparator`.
+    ///
+    /// - Parameter maxSplit: The maximum number of `SubSequence`s to
+    ///   return, minus 1.
+    ///   If `maxSplit + 1` `SubSequence`s are returned, the last one is
+    ///   a suffix of `self` containing the remaining elements.
+    ///   The default value is `Int.max`.
+    ///
+    /// - Parameter allowEmptySubsequences: If `true`, an empty `SubSequence`
+    ///   is produced in the result for each pair of consecutive elements
+    ///   satisfying `isSeparator`.
+    ///   The default value is `false`.
+    ///
+    /// - Requires: `maxSplit &gt;= 0`
+    @warn_unused_result
+    @rethrows public func split(maxSplit: Int, allowEmptySlices: Bool, @noescape isSeparator: (Self.Generator.Element) throws -&gt; Bool) rethrows -&gt; [Self.SubSequence]
 }
 </code></pre><p>字面意思就是使类型序列化，简单的说就是为了泛型结构能够使用for…in这种方便的循环取值操作。 在Swift的类型定义中，我们可以看到String、Array等这些些基本的类型都实现了SequenceType协议。  为了便于理解，我们还是来看一个实例就知道了。</p>
-<pre><code><span class="class"><span class="keyword">struct</span> <span class="title">Stack</span>&lt;<span class="title">T</span>&gt; </span>{
-    <span class="keyword">var</span> items = [<span class="type">T</span>]()
-    <span class="keyword">var</span> <span class="built_in">count</span>:<span class="type">Int</span> {
-        <span class="keyword">return</span> items.<span class="built_in">count</span>
+<pre><code>struct Stack&lt;T&gt; {
+    var items = [T]()
+    var count:Int {
+        return items.count
     }
 
-    <span class="keyword">mutating</span> <span class="func"><span class="keyword">func</span> <span class="title">push</span><span class="params">(item: T)</span> </span>{
+    mutating func push(item: T) {
         items.append(item)
     }
 
-    <span class="keyword">mutating</span> <span class="func"><span class="keyword">func</span> <span class="title">pop</span><span class="params">()</span> -&gt; <span class="title">T</span> </span>{
-        <span class="keyword">return</span> items.last!
+    mutating func pop() -&gt; T {
+        return items.last!
     }
 
-    <span class="keyword">subscript</span>(index: <span class="type">Int</span>) -&gt; <span class="type">T</span> {
-        <span class="keyword">get</span> {
-            precondition(index &lt; items.<span class="built_in">count</span>, <span class="string">"Index越界"</span>)
-            <span class="keyword">return</span> items[index]
+    subscript(index: Int) -&gt; T {
+        get {
+            precondition(index &lt; items.count, &quot;Index越界&quot;)
+            return items[index]
         }
-        <span class="keyword">set</span> {
-            precondition(index &lt; items.<span class="built_in">count</span>, <span class="string">"Index越界"</span>)
+        set {
+            precondition(index &lt; items.count, &quot;Index越界&quot;)
             items[index] = newValue
         }
     }
 }
 
-<span class="keyword">var</span> stackOfStrings = <span class="type">Stack</span>&lt;<span class="type">String</span>&gt;()
-<span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">1</span>...<span class="number">5</span> {
-    stackOfStrings.push(<span class="string">"stackTestValue_<span class="subst">\(i)</span>"</span>)
+var stackOfStrings = Stack&lt;String&gt;()
+for i in 1...5 {
+    stackOfStrings.push(&quot;stackTestValue_\(i)&quot;)
 }
-<span class="keyword">for</span> item <span class="keyword">in</span> stackOfStrings {
-    <span class="built_in">print</span>(item)
+for item in stackOfStrings {
+    print(item)
 }
 </code></pre><blockquote>
 <p>编译器抛出了错误： ‘Stack’ does not have a member named ‘Generator’</p>
 </blockquote>
 <p>这个错误就是写本文的目的，我们来添加上序列化代码：</p>
-<pre><code><span class="class"><span class="keyword">extension</span> <span class="title">Stack</span>: <span class="title">SequenceType</span> </span>{
-    <span class="func"><span class="keyword">func</span> <span class="title">generate</span><span class="params">()</span> -&gt; <span class="title">AnyGenerator</span><span class="generics">&lt;T&gt;</span> </span>{
-        <span class="keyword">var</span> index = <span class="number">0</span>
-        <span class="keyword">return</span> anyGenerator {
-            <span class="keyword">if</span> index &lt; <span class="keyword">self</span>.items.<span class="built_in">count</span> {
-                <span class="keyword">return</span> <span class="keyword">self</span>.items[index++]
-            } <span class="keyword">else</span> {
-                <span class="keyword">return</span> <span class="built_in">nil</span>
+<pre><code>extension Stack: SequenceType {
+    func generate() -&gt; AnyGenerator&lt;T&gt; {
+        var index = 0
+        return anyGenerator {
+            if index &lt; self.items.count {
+                return self.items[index++]
+            } else {
+                return nil
             }
         }
     }
@@ -433,7 +437,7 @@
     </a>
     <ul>
       <li><a class="btn-return-top btn-floating waves-effect green" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
-      <li><a class="btn-floating waves-effect button-collapse yellow darken-1"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse yellow darken-1"  data-activates="main-menu" title="menu"><i class="fa fa-navicon"></i></a></li>
     </ul>
   </div>
 
@@ -514,6 +518,9 @@
                 $(this).attr('data-caption', $(this).attr('alt') || ' ');
             }).materialbox();
 
+        // 优化表格的显示
+        $('table').addClass('responsive-table striped bordered');
+
         // 首页幻灯片
         $('.slider').slider({
             indicators: true,
@@ -585,8 +592,8 @@ MathJax.Hub.Config({
   tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 });
 </script>
-<script type="text/javascript"
-    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+<script type="text/javascript" async
+  src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
 
